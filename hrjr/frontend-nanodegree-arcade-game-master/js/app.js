@@ -14,7 +14,7 @@ var Enemy = function(loc, speed) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     "use strict";
-    thi
+    
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -30,12 +30,11 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(loc, speed) {
+var Player = function(loc) {
     "use strict";
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.loc = loc;
-    this.speed = speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = "images/char-cat-girl.png";
@@ -56,7 +55,11 @@ Player.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+var mugsy = Enemy(1, 3);
+var bugsy = Enemy(2, 2);
+var lugsy = Enemy(3, 1);
 
+var vario = Player(1)
 
 
 // This listens for key presses and sends the keys to your
