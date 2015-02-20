@@ -33,6 +33,7 @@ function filter(collection, predicate){
             }
         }
     }
+    //new code, post interview
     else {
         var newOjb = {};
         each(collection, function(cat) {
