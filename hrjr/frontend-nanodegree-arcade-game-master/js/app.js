@@ -14,7 +14,7 @@ var Enemy = function(loc, speed) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     "use strict";
-    
+    thi
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
