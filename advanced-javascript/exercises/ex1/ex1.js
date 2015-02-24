@@ -1,33 +1,29 @@
 A();
 
 function C() {
-	console.log("OOPS!");
+	console.log("C");
+	d();
 }
 
-function E(f) {
+function E() {
 	console.log("E");
 	f();
-	var f = F;
 }
 
-var A = function() {
+function A() {
 	console.log("A");
 	B();
-};
-
-var C;
+}
 
 function G() {
 	console.log("G");
 	H();
 
-	var H = function() {
+function H() {
 		console.log("H");
 		I();
 	};
 }
-
-var D = d;
 
 function d() {
 	console.log("D");
@@ -37,41 +33,42 @@ function d() {
 function I() {
 	console.log("I");
 	J();
-	J();
 }
 
-B = function() {
+function B() {
 	console.log("B");
 	C();
-};
-
-var F = function() {
-	console.log("F");
-	G();
-};
-
-var rest = "KLMNOPQRSTUVWXYZ".split("");
-for (var i=0; i<rest.length; i++) {
-	(function(i){
-		// define the current function
-		window[rest[i]] = function() {
-			console.log(rest[i]);
-			if (i < (rest.length-1)) {
-				// TODO: call the next function
-			}
-		};
-	})(i);
 }
 
-var J = function() {
-	J = function() {
+function f() {
+	console.log("F");
+	G();
+}
+
+function K() {
+	var rest = "KLMNOPQRSTUVWXYZ".split("");
+	for (var i=0; i<rest.length; i++) {
+		(function(i){
+			// define the current function
+			rest[i] = function() {
+				console.log(rest[i]);
+				if (i < (rest.length-1)) {
+					rest[i + 1]();
+					// TODO: call the next function
+					rest[i]();
+				}
+			};
+		})(i);
+	}
+}
+
+
+function J() {
 		console.log("J");
 		K();
-	};
-};
+	}
 
-C = function() {
+function C() {
 	console.log("C");
-	D();
-};
-
+	d();
+}
