@@ -38,12 +38,6 @@ NotesManager.prototype.hideHelp = function() {
 	this.$help.hide();
 };
 
-NotesManager.prototype.loadData = function(data) {
-	for (var i=0; i<data.length; i++) {
-		this.notes.push(data[i]);
-	}
-};
-
 NotesManager.prototype.handleOpenHelp = function(evt) {
 	if (!this.$help.is(":visible")) {
 		evt.preventDefault();
@@ -75,6 +69,12 @@ NotesManager.prototype.handleNoteClick = function(evt) {
 	this.$notes.addClass("active");
 	this.$notes.children(".note").removeClass("highlighted");
 	$(evt.target).addClass("highlighted");
+};
+
+NotesManager.prototype.loadData = function(data) {
+	for (var i=0; i<data.length; i++) {
+		this.notes.push(data[i]);
+	}
 };
 
 NotesManager.prototype.init = function(opts) {

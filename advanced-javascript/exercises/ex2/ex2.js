@@ -1,4 +1,7 @@
 // assume this data came from the database
+var NotesManager = (function NotesManager($) {
+
+var public = function() {}
 var notes = [
 	"This is the first note I've taken!",
 	"Now is the time for all good men to come to the aid of their country.",
@@ -73,28 +76,30 @@ function handleNoteClick(evt) {
 	$(evt.target).addClass("highlighted");
 }
 
-function init() {
+return function init() {
 	// build the initial list from the existing `notes` data
 	var html = "";
-	for (i=0; i<notes.length; i++) {
+	for ( var i = 0; i < notes.length; i++) {
 		html += "<a href='#' class='note'>" + notes[i] + "</a>";
 	}
 	$("#notes").html(html);
 
 	// listen to "help" button
-	$("#open_help").bind("click",handleOpenHelp);
+	$("#open_help").bind("click", handleOpenHelp);
 
 	// listen to "add" button
-	$("#add_note").bind("click",handleAddNote);
+	$("#add_note").bind("click", handleAddNote);
 
 	// listen for <enter> in text box
-	$("#new_note").bind("keypress",handleEnter);
+	$("#new_note").bind("keypress", handleEnter);
 
 	// listen for clicks outside the notes box
-	$(document).bind("click",handleDocumentClick);
+	$(document).bind("click", handleDocumentClick);
 
 	// listen for clicks on note elements
-	$("#notes").on("click",".note",handleNoteClick);
+	$("#notes").on("click", ".note", handleNoteClick);
 }
+
+})(jquery);
 
 $(document).ready(init);
