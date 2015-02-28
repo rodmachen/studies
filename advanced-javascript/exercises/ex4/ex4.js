@@ -13,11 +13,12 @@ Widget.prototype.render = function($where){
 	}
 };
 
-function Button(/* ... */) {
-/*
-	...
+function Button(label) {
+
+
+
+
 	this.$elem = $("<button>").text(this.label);
-*/
 }
 
 /*
