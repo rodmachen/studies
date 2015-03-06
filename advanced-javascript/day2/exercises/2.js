@@ -2,7 +2,7 @@
 // process.stdout.write("Hello world");
 
 function printHelp() {
-	console.log("1.js (c) Rod Machen");
+	console.log("2.js (c) Rod Machen");
 	console.log("");
 	console.log("usage:");
 	console.log("--help");
@@ -17,14 +17,14 @@ if (args.help || !args.file) {
 	process.exit(1);
 }
 
-var hello = require("./helloworld.js");
+var hello = require("./helloworld2.js");
 
-hello.say(args.file, function(err, contents) {
-	if (err) {
-		console.error("Error: " + err);
-	} else {
+hello.say(args.file)
+.val(function(contents) {
 	console.log(contents.toString());
-	}
+})
+.or(function(err){
+	console.error("Error: " + err);
 });
 
 
