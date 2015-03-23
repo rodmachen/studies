@@ -10,10 +10,11 @@ body {
 .main {
   padding: 2em 0; }
   .main input {
-    width: 83%;
+    width: auto;
     float: left; }
   .main button {
-    float: right; }
+    float: left;
+    margin: 0.15em; }
   .main .comments p {
     margin: 1em;
     border-radius: 5px;

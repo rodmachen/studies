@@ -18,11 +18,13 @@ body {
 .main {
 	padding: 2em 0;
 	input {
-		width: 83%;
+		// width: 83%;
+		width: auto;
 		float: left;
 	}
 	button {
-		float: right;
+		float: left;
+		margin: .15em;
 	}
 	.comments {
 		p {
