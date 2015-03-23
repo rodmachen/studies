@@ -15,6 +15,7 @@ body {
   .main button {
     float: right; }
   .main .comments p {
+    margin: 1em;
     border-radius: 5px;
     padding: 0.25em 0.5em; }
   .main .comments p:nth-child(even) {
