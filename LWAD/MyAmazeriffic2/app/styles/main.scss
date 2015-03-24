@@ -3,10 +3,8 @@
 
 // Custom imports & styles here.
 
-* {
-}
 body {
-	background-color: #fafafa;
+	// background-color: #fafafa;
 }
 
 .header {
@@ -23,18 +21,19 @@ body {
 	h6 {
 		color: red;
 		float: left;
-		padding: 0 .5em ;
+		padding: 0 .5em;
 	}
-
-
 }
 
-.tabs, .content {
-	background: #eee;
+main {
+    background: #fff;
+    border-radius: 0 5px 5px 5px;;
+    padding: 40px;
 }
+
 .tabs a span {
-    display: inline-block;
     border-radius: 5px 5px 0 0;
+    display: inline-block;
     width: 100px;
     margin-right: 10px;
     text-align: center;
@@ -42,8 +41,43 @@ body {
     padding: 5px;
 }
 
-.tabs a span.active {
+.tabs a .active {
     background: #eee;
+}
+
+main .content {
+    padding: 30px 30px 10px 10px;
+    border-radius: 0 5px 5px 5px;
+    background: #eee;
+}
+
+main .content li {
+    border-radius: 5px;
+    padding: 3px 3px 3px 10px;
+    background: #eff;
+    margin: 0 0 10px 0;
+}
+
+main .content button {
+  font-weight: bold;
+  padding: 0 3px 0 3px;
+  border-radius: 5px;
+  background: #ccc;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+
+main .content p {
+    background: yellow;
+}
+
+main .content input {
+    font-size: 1.5em;
+}
+
+li {
+    list-style: none;
 }
 
 .footer {
