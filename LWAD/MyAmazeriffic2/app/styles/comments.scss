@@ -1,0 +1,47 @@
+// bower:scss
+// endbower
+
+// Custom imports & styles here.
+
+body {
+	background-color: #ffffcc;
+}
+
+.header {
+	border-bottom: 1px solid black;
+	h5 {
+		padding-top: 1.25em;
+		font-style: italic;
+	}
+}
+
+.main {
+	padding: 2em 0;
+	input {
+		// width: 83%;
+		width: auto;
+		float: left;
+	}
+	button {
+		float: left;
+		margin: .15em;
+	}
+	.comments {
+		p {
+			margin: 1em;
+			border-radius: 5px;
+			padding: .25em .5em;
+		}
+	}
+	.comments p:nth-child(even) {
+    background: lavender;
+	}
+	.comments p:nth-child(odd) {
+	    background: gainsboro;
+	}
+}
+
+.footer {
+	border-top: 1px solid black;
+	padding-top: .5em;
+}
