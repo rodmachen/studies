@@ -15,22 +15,20 @@ body {
     float: left;
     padding: 0 0.5em; }
 
-.main {
-  padding: 2em 0; }
-  .main input {
-    width: auto;
-    float: left; }
-  .main button {
-    float: left;
-    margin: 0.15em; }
-  .main .comments p {
-    margin: 1em;
-    border-radius: 5px;
-    padding: 0.25em 0.5em; }
-  .main .comments p:nth-child(even) {
-    background: lavender; }
-  .main .comments p:nth-child(odd) {
-    background: gainsboro; }
+.tabs, .content {
+  background: #eee; }
+
+.tabs a span {
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  background: #ddd;
+  padding: 5px; }
+
+.tabs a span.active {
+  background: #eee; }
 
 .footer {
   padding: 3em 0;

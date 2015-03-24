@@ -29,30 +29,21 @@ body {
 
 }
 
-.main {
-	padding: 2em 0;
-	input {
-		// width: 83%;
-		width: auto;
-		float: left;
-	}
-	button {
-		float: left;
-		margin: .15em;
-	}
-	.comments {
-		p {
-			margin: 1em;
-			border-radius: 5px;
-			padding: .25em .5em;
-		}
-	}
-	.comments p:nth-child(even) {
-    background: lavender;
-	}
-	.comments p:nth-child(odd) {
-	    background: gainsboro;
-	}
+.tabs, .content {
+	background: #eee;
+}
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+}
+
+.tabs a span.active {
+    background: #eee;
 }
 
 .footer {
