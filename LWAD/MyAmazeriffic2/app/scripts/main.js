@@ -13,7 +13,10 @@ var main = function () {
 	$(".tabs a span").toArray().forEach(function (element) {
 		$(element).on("click", function () {
 			var $element = $(element),
-					$content;
+								$content,
+                $input,
+                $button,
+                i;
 
         $(".tabs a span").removeClass("active");
         $element.addClass("active");
@@ -24,17 +27,36 @@ var main = function () {
         	for (var i = (toDos.length - 1); i >= 0; i -= 1) {
 		        $content.append($("<li>").text(toDos[i]));
         	}
-	        $("main .content").append($content);
 
         } else if ($element.parent().is(":nth-child(2)")) {
 					$content = $("<ul>");
 					toDos.forEach(function (todo) {
 	            $content.append($("<li>").text(todo));
 	        });
-	        $("main .content").append($content);
         } else if ($element.parent().is(":nth-child(3)")) {
-					console.log("THIRD TAB CLICKED!");
+                $input = $("<input>"),
+                $button = $('<button class="button tiny radius">').text("+");
+
+                function addInput() {
+                    if ($input.val() !== "") {
+                        toDos.push($input.val());
+                        $input.val("");
+                    }
+                  }
+                $button.on("click", function () {
+                	addInput()
+                });
+
+                $input.on("keypress", function () {
+									if (event.keyCode === 13) {
+										addInput()
+                  }
+                });
+
+                $content = $("<div>").append($input).append($button);
         }
+        $("main .content").append($content);
+
 				return false;
 			});
 			$(".tabs a:first-child span").trigger("click");
