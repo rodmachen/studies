@@ -49,7 +49,7 @@ main .content {
     padding: 30px 30px 10px 10px;
     border-radius: 0 5px 5px 5px;
     background: #eee;
-    min-height: 100px;
+    min-height: 200px;
 }
 
 main .content li {
@@ -62,6 +62,7 @@ main .content li {
 main .content input {
 	width: 15em;
 	float: left;
+  font-size: 1.5em;
 }
 
 main .content button {
@@ -80,15 +81,16 @@ main .content button {
 // }
 
 main .content p {
-    background: yellow;
+    // background: yellow;
 }
 
-main .content input {
-    font-size: 1.5em;
-}
 
 li {
     list-style: none;
+}
+
+.tags {
+	clear: both;
 }
 
 .footer {
