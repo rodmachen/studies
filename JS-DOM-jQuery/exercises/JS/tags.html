@@ -4,9 +4,17 @@
 		<script type='text/javascript'>
 			// make functionality goes here
 			make = {};
+			var tags = ['a', 'div', 'span', 'form', 'h1', 'h2', 'h3', 'h4']
+			for (var i = 0; i < tags.length; i++) {
+				(function(j) {
+					make[tags[j]] = function() {
+						return document.createElement(tags[j])
+					};
+				})(i);
+			};
 		</script>
 		<script type='text/javascript'>
-			var h1 = make.h1();
+			var h1 = make['h1']();
 
 			h1.innerHTML = "Hello World"
 			document.body.appendChild(h1);
